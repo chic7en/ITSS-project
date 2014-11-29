@@ -8,9 +8,11 @@ class User extends MY_Controller
      
      $this->load->library('form_validation');
      $this->load->helper('form');
+     $this->load->library('session');
   }
   
    public function index(){
+        
         $this->load->model('product_model');
         $temp['title']='Book Shop';
         $temp['template']='index_layout';
@@ -19,9 +21,12 @@ class User extends MY_Controller
         $input['limit'] = array('15', 0);
         $products = $this->product_model->get_list($input);
         $temp['data']=$products;
+        $user['name']=$this->session->userdata("user_name");
+        $temp['user']=$user;
         $this->load->view("bookshop/user_layout",$temp);
 
     }
+   
     public function logout(){
 
     // Hủy tất cả các session

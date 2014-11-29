@@ -25,7 +25,7 @@
 <body class="metro" background="<?php echo base_url()?>public/bookshop/images/bg/metro_green_1080p.jpg">
 
     
-    <?php $this->load->view("bookshop/user_top",$data);?>
+    <?php $this->load->view("bookshop/user_top",$user);?>
     <?php $this->load->view("bookshop/header");?>
     <div id="main" class="grid ">
         <?php $this->load->view("bookshop/slide" );?>

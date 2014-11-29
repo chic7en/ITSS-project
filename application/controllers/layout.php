@@ -5,6 +5,7 @@ class Layout extends MY_Controller{
         
         $this->load->library('form_validation');
         $this->load->helper('form');
+        $this->load->library('session');
     }
     public function index(){
         $this->load->model('product_model');
@@ -18,6 +19,12 @@ class Layout extends MY_Controller{
         $this->load->view("bookshop/layout",$temp);
 
     }
+    // public function register(){
+    //   redirect('user/register');
+    // }
+    // public function login(){
+    //   redirect('user/login');
+    // }
     /*
     * Kiểm tra email đã tồn tại hay chưa
     */
@@ -70,7 +77,7 @@ class Layout extends MY_Controller{
          if($this->user_model->create($data))
          {
             $this->session->set_flashdata('flash_message', 'Dang ky thanh vien thanh cong');
-            $this->session->flashdata('flash_message');
+            echo $this->session->flashdata('flash_message');
         redirect();//chuyen toi trang chu
          }
      }
@@ -117,7 +124,9 @@ class Layout extends MY_Controller{
          else{
           $this->session->set_userdata(array(
                  'logged_in' => true,
-                  'user_id' => $user_id
+                  'user_id' => $user_id,
+                  'user_email'=>$user->email,
+                  'user_name'=>$user->name
               ));
              redirect('user');
          }

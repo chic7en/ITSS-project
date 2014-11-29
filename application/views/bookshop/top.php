@@ -10,15 +10,23 @@
             
         </button>
         <div class="element">
-        <a class="dropdown-toggle" href="#"><i class="icon-book"></i>  HOME</a>
-            <ul class="dropdown-menu" data-role="dropdown">
+        <a class="dropdown-toggle" href="#"><i class="icon-book"></i>  BOOK</a>
+            <ul class="dropdown-menu bg-lightGreen" data-role="dropdown">
 
-                <li><a href="#">Main</a></li>
-                <li><a href="#">File Open</a></li>
+                <li><a href="#">Today Highlight</a></li>
+                <li><a href="#">Business</a></li>
+                <li><a href="#">Comic Strips</a></li>
+                <li><a href="#">Kids</a></li>
+                <li><a href="#">Medicals</a></li>
+                <li><a href="#">Romances</a></li>
+                <li><a href="#">Teen</a></li>
                 <li class="divider"></li>
                 <li><a href="#">Print...</a></li>
                 <li class="divider"></li>
                 <li><a href="#">Exit</a></li>
+
+                
+              
             </ul>
             
         </div>
@@ -48,10 +56,7 @@
             </ul>
         </div>
         
-        <button class="element image-button image-left place-right">
-            User
-            <img src="images/211858_100001930891748_287895609_q.jpg"/>
-        </button>
+        
     </nav>
 </nav>
     </div>
