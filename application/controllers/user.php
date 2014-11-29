@@ -79,7 +79,7 @@ class User extends MY_Controller
         //after a user click the add to cart button in our product page we could redirect him
         //back to our product page
         
-         redirect('user');
+         redirect('user/viewcart');
         
         //but if you use ajax to add item to your cart maybe you could use an echo fucntion.
         
@@ -115,6 +115,12 @@ class User extends MY_Controller
         
         redirect('user/viewcart');
     }
+    public function empty_cart()
+     {
+         //hàm xóa cả giỏ hàng
+         $this->cart->destroy();
+         redirect('user');
+     }
 
  
 }

@@ -1,6 +1,12 @@
 	<div class= "grid">
 	<div class ="row">
-	<div class ="span9"></div>
+	<div class ="span9">
+	<div class="span3"></div>
+	<div class="span4 bg-amber padding20 text-center">
+         <h2 class="fg-white">Book Shop</h2>
+         <p class="subheader-secondary fg-white" style="font-size: 1.4rem;">simple steps to you library</p>	
+    </div>
+                    </div>
 	<div class= "span6">
 	<div id="headerWrapper" style="padding-bottom: 100px; padding-top: 10px;" >
 	<div class  ="tile bg-darkGreen ">

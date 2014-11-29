@@ -11,19 +11,20 @@
         </div>
         <div class="element">
         <a class="dropdown-toggle" href="#"><i class="icon-book"></i>  BOOK</a>
-            <ul class="dropdown-menu bg-lightGreen" data-role="dropdown">
+            <ul class="dropdown-menu bg-amber" data-role="dropdown">
 
                 <li><a href="#">Today Highlight</a></li>
+                <li class="divider"></li>
                 <li><a href="#">Business</a></li>
                 <li><a href="#">Comic Strips</a></li>
                 <li><a href="#">Kids</a></li>
                 <li><a href="#">Medicals</a></li>
                 <li><a href="#">Romances</a></li>
                 <li><a href="#">Teen</a></li>
-                <li class="divider"></li>
+                <!-- <li class="divider"></li>
                 <li><a href="#">Print...</a></li>
                 <li class="divider"></li>
-                <li><a href="#">Exit</a></li>
+                <li><a href="#">Exit</a></li> -->
 
                 
               
@@ -51,6 +52,7 @@
             </a>
             <ul class="dropdown-menu place-right bg-lightGreen" data-role="dropdown">
                 <li><a href="<?php echo base_url()?>user/viewcart">View Cart</a></li>
+                <li><a href="<?php echo base_url()?>user/empty_cart">Empty Cart</a></li>
                 <li><a href="<?php echo base_url()?>layout/register">Infomation</a></li>
                 <li><a href="<?php echo base_url()?>user/logout">Sign Out</a></li>
                 
