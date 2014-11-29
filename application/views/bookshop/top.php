@@ -5,10 +5,10 @@
 	<div>
 	<nav class="navigation-bar bg-darkGreen">
     <nav class="navigation-bar-content">
-        <button class="element">
-            <a  href="<?php echo base_url();?>"><i class="icon-home"></i>  HOME</a>
+        <div class="element">
+            <a  href="<?php echo base_url();?>" style="color:#ffffff"><i class="icon-home"></i>  HOME</a>
             
-        </button>
+        </div>
         <div class="element">
         <a class="dropdown-toggle" href="#"><i class="icon-book"></i>  BOOK</a>
             <ul class="dropdown-menu bg-lightGreen" data-role="dropdown">
