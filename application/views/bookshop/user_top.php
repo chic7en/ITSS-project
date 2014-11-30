@@ -3,11 +3,14 @@
 	<div class="span3"></div>
 	<div class="span12">
 	<div>
-	<nav class="navigation-bar bg-darkGreen">
+	<nav class="navigation-bar bg-darkGreen fixed-top shadow">
     <nav class="navigation-bar-content">
+        
+        <div class="span2">
         <div class="element"  >
-            <a  href="<?php echo base_url();?>user" style="color:#ffffff"><i class="icon-home"></i>  HOME</a>
+            <a  href="<?php echo base_url();?>user" style="color:#ffffff;padding-left: 30px; padding-right: 20px;"><i class="icon-home"></i>  HOME</a>
             
+        </div>
         </div>
         <div class="element">
         <a class="dropdown-toggle" href="#"><i class="icon-book"></i>  BOOK</a>
@@ -45,8 +48,9 @@
                 </div>
             </form>
         </div>
-
+        
         <div class="element place-right">
+
             <a class="dropdown-toggle" href="#">
                 <span class="icon-user-2"></span>
             </a>

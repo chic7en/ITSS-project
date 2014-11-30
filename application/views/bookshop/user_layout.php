@@ -27,9 +27,10 @@
     
     <?php $this->load->view("bookshop/user_top",$user);?>
     <?php $this->load->view("bookshop/header");?>
+    <div class="container">
     <div id="main" class="grid ">
         <?php $this->load->view("bookshop/slide" );?>
-        <div class="row" style="padding-left: 16em;">
+        <div class="row" >
         <div class="span3"></div>
         <div id="info">
        
@@ -37,10 +38,10 @@
                 $this->load->view($template,$data);
             ?>
         </div>
-        </div>
+        
     </div>
 
     <?php $this->load->view("bookshop/bottom");?>
-    
+    </div>
 </body>
 </html>

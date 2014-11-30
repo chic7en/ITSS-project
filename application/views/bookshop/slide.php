@@ -1,7 +1,7 @@
 
 <div class="grid">
                 <div class="row">
-                	<div class="span3"></div>
+                	
                     <div class="span8">
                         <div id="carousel1" class="carousel" style="width: 100%; height: 350px;">
                             <div class="slide" style="left: -620px;">

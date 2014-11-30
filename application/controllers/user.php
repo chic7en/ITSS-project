@@ -17,7 +17,7 @@ class User extends MY_Controller
         
         $this->load->model('product_model');
         $temp['title']='Book Shop';
-        $temp['template']='index_layout';
+        $temp['template']='user_index';
         //$temp['data']['info']="Welcome to CI Layout - QHOnline.Info";
         $input = array();
         $input['limit'] = array('15', 0);

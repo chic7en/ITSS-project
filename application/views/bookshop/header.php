@@ -2,7 +2,7 @@
 	<div class ="row">
 	<div class ="span9">
 	<div class="span3"></div>
-	<div class="span4 bg-amber padding20 text-center">
+	<div class="span4 bg-amber padding20 text-center" style="padding-top:30px">
          <h2 class="fg-white">Book Shop</h2>
          <p class="subheader-secondary fg-white" style="font-size: 1.4rem;">simple steps to you library</p>	
     </div>
