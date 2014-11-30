@@ -46,7 +46,7 @@
     <?php $this->load->view("bookshop/header");?>
     <div class="container">
     <div id="main" class="grid ">
-        <?php $this->load->view("bookshop/slide" );?>
+        
         <div class="row" >
         <div class="span3"></div>
         <div id="info">
