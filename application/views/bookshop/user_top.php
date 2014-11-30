@@ -18,12 +18,12 @@
 
                 <li><a href="#">Today Highlight</a></li>
                 <li class="divider"></li>
-                <li><a href="#">Business</a></li>
-                <li><a href="#">Comic Strips</a></li>
-                <li><a href="#">Kids</a></li>
-                <li><a href="#">Medicals</a></li>
-                <li><a href="#">Romances</a></li>
-                <li><a href="#">Teen</a></li>
+                <li><a href="<?php echo base_url()?>user/category/1">Business</a></li>
+                <li><a href="<?php echo base_url()?>user/category/2">Comic Strips</a></li>
+                <li><a href="<?php echo base_url()?>user/category/3">Kids</a></li>
+                <li><a href="<?php echo base_url()?>user/category/4">Medicals</a></li>
+                <li><a href="<?php echo base_url()?>user/category/5">Romances</a></li>
+                <li><a href="<?php echo base_url()?>user/category/6">Teen</a></li>
                 <!-- <li class="divider"></li>
                 <li><a href="#">Print...</a></li>
                 <li class="divider"></li>
@@ -40,13 +40,15 @@
         <a class="element brand" href="#"><span class="icon-printer"></span></a>
         <span class="element-divider"></span>
 
+        <div class="span3">
         <div class="element input-element">
-            <form>
-                <div class="input-control text">
-                    <input type="text" placeholder="Search...">
-                    <button class="btn-search"></button>
-                </div>
-            </form>
+        
+            <form method="post">
+                <div class="input-control text" style="width: 200px;">
+                <input type="text" placeholder="Search..." name="search">
+                  <button class="btn-search" ></button>
+                   </div>
+            </form></div>
         </div>
         
         <div class="element place-right">

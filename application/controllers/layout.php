@@ -19,6 +19,25 @@ class Layout extends MY_Controller{
         $this->load->view("bookshop/layout",$temp);
 
     }
+    public function search(){
+      echo $search;
+    }
+    public function category($categoryid){
+        
+        $this->load->model('product_model');
+        $temp['title']='Book Shop';
+        $temp['template']='index_layout';
+        
+        $input = array();
+        $input['limit'] = array('15', 0);
+        $where['catalog_id']=$categoryid;
+        $input['where']=$where;
+        $products = $this->product_model->get_list($input);
+
+        $temp['data']=$products;
+        $this->load->view("bookshop/layout",$temp);    
+
+    }
     // public function register(){
     //   redirect('user/register');
     // }

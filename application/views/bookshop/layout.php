@@ -6,9 +6,9 @@
 
  <link rel="stylesheet" href="<?php echo base_url()?>public/bookshop/css/metro-bootstrap.css" type="text/css" media="screen"/>
  <link rel="stylesheet" href="<?php echo base_url()?>public/bookshop/css/metro-bootstrap-responsive.css" type="text/css" media="screen"/>
- <link rel="stylesheet" href="<?php echo base_url()?>public/bookshop/css/bootstrap.min.css" type="text/css" media="screen"/>
+ <!-- <link rel="stylesheet" href="<?php echo base_url()?>public/bookshop/css/bootstrap.min.css" type="text/css" media="screen"/>
 
- <link rel="stylesheet" href="<?php echo base_url()?>public/bookshop/css/bootstrap-theme.min.css" type="text/css" media="screen"/>
+ <link rel="stylesheet" href="<?php echo base_url()?>public/bookshop/css/bootstrap-theme.min.css" type="text/css" media="screen"/> -->
 
  <link rel="stylesheet" href="<?php echo base_url()?>public/bookshop/min/iconFont.min.css" type="text/css" />
 <script src="<?php echo base_url()?>public/bookshop/js/jquery/jquery.min.js"></script>

@@ -18,7 +18,7 @@ class User extends MY_Controller
         $this->load->model('product_model');
         $temp['title']='Book Shop';
         $temp['template']='user_index';
-        //$temp['data']['info']="Welcome to CI Layout - QHOnline.Info";
+        
         $input = array();
         $input['limit'] = array('15', 0);
         $products = $this->product_model->get_list($input);
@@ -26,6 +26,24 @@ class User extends MY_Controller
         $user['name']=$this->session->userdata("user_name");
         $temp['user']=$user;
         $this->load->view("bookshop/user_layout",$temp);
+    }
+
+    public function category($categoryid){
+        
+        $this->load->model('product_model');
+        $temp['title']='Book Shop';
+        $temp['template']='user_index';
+        
+        $input = array();
+        $input['limit'] = array('15', 0);
+        $where['catalog_id']=$categoryid;
+        $input['where']=$where;
+        $products = $this->product_model->get_list($input);
+
+        $temp['data']=$products;
+        $user['name']=$this->session->userdata("user_name");
+        $temp['user']=$user;
+        $this->load->view("bookshop/user_layout",$temp);    
 
     }
    

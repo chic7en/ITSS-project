@@ -1,5 +1,5 @@
 <div class="grid">
-                <div class="row" style="padding-left: 35px;">
+                <div class="row" style="padding-left: 20px;">
                 	
                 	
                     <div class="span8">

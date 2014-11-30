@@ -11,15 +11,18 @@
 	<div id="headerWrapper" style="padding-bottom: 100px; padding-top: 10px;" >
 	<div class  ="tile bg-darkGreen ">
 		<div class  ="tile-content icon">
-			<i class   ="icon-cart-2"></i>
+			<i class   ="icon-shipping"></i>
 		</div>
 		<div class  ="tile-status">
-			<span class ="name">BookStore</span>
+			<span class ="name">  Free Ship</span>
 		</div>
 	</div>
 	<div class ="tile  bg-green">
+	<div class  ="tile-content icon">
+			<i class   ="icon-cart-2"></i>
+		</div>
 	<div class ="brand">
-	<div class ="badge">15</div>
+	<div class ="badge">2</div>
 	</div>
 	</div>	
 	
@@ -28,10 +31,11 @@
 		
 		<div class="tile-content icon">
 		
-		<i class="icon-user "></i>		
+		<i class="icon-info-2 "></i>		
 		
-		<div class ="brand">
-		<div class ="badge activity"></div>
+		<div class  ="tile-status">
+			<span class ="name">  About Us</span>
+		</div>
 		
 		</div>
 		</div>
