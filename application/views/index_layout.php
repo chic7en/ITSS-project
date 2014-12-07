@@ -74,7 +74,7 @@
 	    	<div class="rating small no-margin fg-yellow" data-score="4" data-role="rating" data-stars="5"></div>
 	    	<span class="list-remark">Price: <?php echo $p->price;?> VNĐ</span>
 	    	<div >
-                    <button id="notify_btn_2" class="shortcut danger" style="margin-top:80px;height:90px;"> <i class="icon-cart-2"></i>Buy</button>
+                    <button class="shortcut danger notify_btn_2" style="margin-top:80px;height:90px;"> <i class="icon-cart-2"></i>Buy</button>
                     
                 </div>
 <!-- 

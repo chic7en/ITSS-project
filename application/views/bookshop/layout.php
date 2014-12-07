@@ -22,7 +22,7 @@
 <script src="<?php echo base_url()?>public/bookshop/js/main.js"></script>
  <script>
                         $(function(){
-                            $('#notify_btn_2').on('click', function(){
+                            $('.notify_btn_2').on('click', function(){
                                 setTimeout(function(){
                                     $.Notify({style: {background: '#1ba1e2', color: 'white'}, caption: 'Hello...', content: "Buy Book is Simple!!!"});
                                 }, 1000);
