@@ -64,17 +64,20 @@
 	<div class="span4">
 	<div class="listview">
 	<div class="span4">
-	<div  class="list bg-darkGreen fg-white" style="height:250px;">
-	   <div class="list-content">
-
-	     <a  href="#" style="color:#ffffff"><img src="<?php echo base_url();?>public/bookshop/images/<?php echo $p->image_link;?>" class="icon" style="width:150px;height:auto;">
-	 	  </a>
-	 	<div class="data">
-	    	<span class="list-title"><a  href="#" style="color:#ffffff"><?php echo $p->name;?></a></span>
-	    	<div class="rating small no-margin fg-yellow" data-score="4" data-role="rating" data-stars="5"></div>
-	    	<span class="list-remark">Price: <?php echo $p->price;?> VNĐ</span>
+	<div  class="list bg-darkGreen fg-white " style="height:250px;">
+	   <div class="list-content">      
+	     <a  href="#" style="color:#ffffff">
+         <img src="<?php echo base_url();?>public/bookshop/images/<?php echo $p->image_link;?>" class="icon" style="width:150px;height:auto;">
+          </a>
+	 	<div >
+	    	<span class="list-title"><a  href="#" style="color:#ffffff"><?php echo $p->name;?></a></span><br>
+	    	<span class="list-remark">Price: <?php echo $p->price;?> VNĐ</span><br>
+            <button class="shortcut primary" style="height: 40px; padding-top: 0px;">
+                                    <i class="icon-heart"></i>
+                                    <small class="bg-lightBlue fg-white">10</small>
+                                </button>
 	    	<div >
-                    <button class="shortcut danger notify_btn_2" style="margin-top:80px;height:90px;"> <i class="icon-cart-2"></i>Buy</button>
+                    <button class="shortcut danger notify_btn_2" style="margin-top:35px;height:90px;"> <i class="icon-cart-2"></i>Buy</button>
                     
                 </div>
 <!-- 

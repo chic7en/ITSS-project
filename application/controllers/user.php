@@ -27,9 +27,18 @@ class User extends MY_Controller
         $temp['user']=$user;
         $this->load->view("bookshop/user_layout",$temp);
     }
+    public function product($id){
+        $this->load->model('product_model');
+        $temp['title']='Book Shop';
+        $temp['template']='bookshop/user/product';
+        $product=$this->product_model->get_info($id);
+        $temp['data']=$product;
+        $user['name']=$this->session->userdata("user_name");
+        $temp['user']=$user;
+        $this->load->view("bookshop/user_layout",$temp);
+    }
 
     public function category($categoryid){
-        
         $this->load->model('product_model');
         $temp['title']='Book Shop';
         $temp['template']='user_index';
@@ -137,7 +146,7 @@ class User extends MY_Controller
      {
          //hàm xóa cả giỏ hàng
          $this->cart->destroy();
-         redirect('user');
+         redirect('user/viewCart');
      }
 
  

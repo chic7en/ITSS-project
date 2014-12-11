@@ -36,9 +36,6 @@
         </div>
 
         <span class="element-divider"></span>
-        <a class="element brand" href="#"><span class="icon-spin"></span></a>
-        <a class="element brand" href="#"><span class="icon-printer"></span></a>
-        <span class="element-divider"></span>
 
         <div class="span3">
         <div class="element input-element">

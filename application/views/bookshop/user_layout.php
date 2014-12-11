@@ -26,7 +26,7 @@
 
     
     <?php $this->load->view("bookshop/user_top",$user);?>
-    <?php $this->load->view("bookshop/header");?>
+    <?php $this->load->view("bookshop/user_header");?>
     <div class="container">
     <div id="main" class="grid ">
         
