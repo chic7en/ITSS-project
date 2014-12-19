@@ -1,17 +1,16 @@
 	<div class="grid">
 	<div class="row">
-	<div class="span3"></div>
+	<!-- <div class="span3"></div>
 	<div class="span12">
-	<div>
-	<nav class="navigation-bar bg-darkGreen fixed-top shadow">
-    <nav class="navigation-bar-content">
+	<div> -->
+	<div class="navigation-bar bg-darkGreen fixed-top shadow">
+    <div class="navigation-bar-content container">
         
-        <div class="span2">
-        <div class="element"  >
-            <a  href="<?php echo base_url();?>user" style="color:#ffffff;padding-left: 30px; padding-right: 20px;"><i class="icon-home"></i>  HOME</a>
-            
-        </div>
-        </div>
+        
+            <a class="element" href="<?php echo base_url();?>user" style="color:#ffffff;padding-left: 30px; padding-right: 20px;"><i class="icon-home"></i>  HOME</a>
+        <span class="element-divider"></span>
+        <a href="#" class="element1 pull-menu"></a>
+        <div class="element-menu">
         <div class="element">
         <a class="dropdown-toggle" href="#"><i class="icon-book"></i>  BOOK</a>
             <ul class="dropdown-menu bg-amber" data-role="dropdown">
@@ -32,8 +31,8 @@
                 
               
             </ul>
-            
-        </div>
+        </div>    
+        
 
         <span class="element-divider"></span>
 
@@ -66,8 +65,9 @@
             <?php print_r($user['name']);?>
 <!--             <img src="images/211858_100001930891748_287895609_q.jpg"/> -->
         </button>
-    </nav>
-</nav>
+    </div>
+    </div>
+</div>
     </div>
     </div>
     </div>

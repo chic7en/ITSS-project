@@ -44,6 +44,8 @@
   </tfoot>
 </table>
 </div>
-<div class="span6">
-<p><?php echo form_submit('', 'Update your Cart'); ?></p>
-</div>
+<button class="success span2">Update your Cart</button>
+<div class="span2"></div>
+<a href="#" onclick="window.history.back();"><p class="fg-white">Continues to buy</p></a>
+
+

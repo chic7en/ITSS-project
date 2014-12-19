@@ -11,10 +11,21 @@ class User extends MY_Controller
      $this->load->library('session');
      $this->load->library('cart');
      $this->load->model('product_model');
+     $this->load->model('like_model');
+     $this->load->model('user_model');
+  }
+  public function test(){
+        echo $this->session->flashdata('login_success');
+    $datestring = "%Y-%m-%d | %h:%i %a";
+    $time = time();
+
+    $time1=mdate($datestring, $time);
+    echo $time1;
+    
   }
   
    public function index(){
-        
+        echo $this->session->flashdata('login_success');
         $this->load->model('product_model');
         $temp['title']='Book Shop';
         $temp['template']='user_index';
@@ -140,13 +151,13 @@ class User extends MY_Controller
         
         $this->cart->update($data);
         
-        redirect('user/viewcart');
+        redirect('user/viewcart/');
     }
     public function empty_cart()
      {
          //hàm xóa cả giỏ hàng
          $this->cart->destroy();
-         redirect('user/viewCart');
+         redirect('user/viewcart');
      }
 
  

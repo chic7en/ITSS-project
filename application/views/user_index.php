@@ -73,7 +73,7 @@
             <span class="list-remark">Price: <?php echo $p->price;?> VNĐ</span><br>
             <button class="shortcut primary" style="height: 40px; padding-top: 0px;">
                                     <i class="icon-heart"></i>
-                                    <small class="bg-lightBlue fg-white">10</small>
+                                    <small class="bg-lightBlue fg-white"><?php echo $p->like?></small>
                                 </button>
 	    	<button class="shortcut danger" style="margin-top:35px;height:90px;" onclick="window.location=(&quot;<?php echo base_url();?>user/addtocart/<?php echo $p->id;?>&quot;); ">
 	                    <i class="icon-cart-2"></i>

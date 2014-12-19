@@ -31,8 +31,7 @@
     <div id="main" class="grid ">
         
         <div class="row" >
-        <div class="span3"></div>
-        <div id="info">
+        <div class="container" id="info">
        
             <?php
                 $this->load->view($template,$data);

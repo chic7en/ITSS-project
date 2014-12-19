@@ -110,6 +110,7 @@ class Layout extends MY_Controller{
   {
     // Kiểm tra người dùng đã đăng nhập hay chưa. Nếu người dùng đăng nhập rồi thì chuyển thẳng đến trang đích
      if($this->session->userdata('logged_in')){
+         $this->session->set_flashdata('login_success','Login Succes...!');
          redirect('user');
      }
      //load thu vien validation
@@ -141,12 +142,14 @@ class Layout extends MY_Controller{
               redirect('layout/login');
          }
          else{
+          $this->session->set_flashdata('login_success','Login Succes...!');
           $this->session->set_userdata(array(
                  'logged_in' => true,
                   'user_id' => $user_id,
                   'user_email'=>$user->email,
                   'user_name'=>$user->name
               ));
+
              redirect('user');
          }
          
