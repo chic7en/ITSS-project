@@ -37,7 +37,7 @@
         <span class="element-divider"></span>
 
         <div class="span3">
-        <div class="element input-element">
+        <div class="element input-element no-tablet-portrait no-phone">
         
             <form method="post">
                 <div class="input-control text" style="width: 200px;">

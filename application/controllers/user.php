@@ -23,7 +23,26 @@ class User extends MY_Controller
     echo $time1;
     
   }
-  
+  public function like(){
+    $product_id = $this->input->post('product_id');
+    $user_id= $this->session->userdata("user_id");
+    $data=array(
+      'product_id'=> $product_id,
+      'user_id'   => $this->session->userdata("user_id")
+      );
+    $like=($this->like_model->check_like($user_id,$product_id));
+    if(!$like){
+    $this->like_model->create($data);
+    $where['product_id']=$product_id;
+    $input['where']=$where;
+    $data1['like_num']=$this->like_model->get_total($input);  
+    // $product_id='24';
+    // $data['like_num']='4';
+    $this->product_model->update($product_id,$data1) ;
+    echo $data1['like_num'];
+    }
+    else echo '0';
+   }
    public function index(){
         echo $this->session->flashdata('login_success');
         $this->load->model('product_model');

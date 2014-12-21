@@ -1,5 +1,5 @@
 <div class="grid">
-                <div class="row" style="padding-left: 20px;">
+                <div class="row no-tablet-portrait no-phone" style="padding-left: 20px;">
                 	
                 	
                     <div class="span8">
@@ -66,15 +66,15 @@
 	<div class="span4">
 	<div  class="list bg-darkGreen fg-white " style="height:250px;">
 	   <div class="list-content">      
-	     <a  href="#" style="color:#ffffff">
+	     <a href="<?php echo base_url()?>layout/product/<?php echo $p->id?>" style="color:#ffffff">
          <img src="<?php echo base_url();?>public/bookshop/images/<?php echo $p->image_link;?>" class="icon" style="width:150px;height:auto;">
           </a>
 	 	<div >
-	    	<span class="list-title"><a  href="#" style="color:#ffffff"><?php echo $p->name;?></a></span><br>
+	    	<span class="list-title"><a href="<?php echo base_url()?>layout/product/<?php echo $p->id?>" style="color:#ffffff"><?php echo $p->name;?></a></span><br>
 	    	<span class="list-remark">Price: <?php echo $p->price;?> VNĐ</span><br>
             <button class="shortcut primary" style="height: 40px; padding-top: 0px;">
                                     <i class="icon-heart"></i>
-                                    <small class="bg-lightBlue fg-white">10</small>
+                                    <small class="bg-lightBlue fg-white"><?php echo $p->like_num?></small>
                                 </button>
 	    	<div >
                     <button class="shortcut danger notify_btn_2" style="margin-top:35px;height:90px;"> <i class="icon-cart-2"></i>Buy</button>

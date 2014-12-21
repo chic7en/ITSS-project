@@ -20,7 +20,6 @@
 <link rel="stylesheet" href="<?php echo base_url()?>public/bookshop/css/reset.css" type="text/css" media="screen"/>
 <script src="<?php echo base_url()?>public/bookshop/js/modernizr.js"></script>
 <script src="<?php echo base_url()?>public/bookshop/js/main.js"></script>
-
 </head>
 <body class="metro" background="<?php echo base_url()?>public/bookshop/images/bg/metro_green_1080p.jpg">
 

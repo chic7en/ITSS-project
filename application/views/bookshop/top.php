@@ -1,28 +1,28 @@
-	<div class="grid">
-	<div class="row">
-	<div class="span3"></div>
-	<div class="span12">
-	<div>
-	<nav class="navigation-bar bg-darkGreen fixed-top shadow">
-    <nav class="navigation-bar-content">
-        <div class="span2">
-        <div class="element">
-            <a  href="<?php echo base_url();?>" style="color:#ffffff;padding-left: 30px; padding-right: 20px;"><i class="icon-home"></i>  HOME</a>
-            
-        </div>
-        </div>
+    <div class="grid">
+    <div class="row">
+    <!-- <div class="span3"></div>
+    <div class="span12">
+    <div> -->
+    <div class="navigation-bar bg-darkGreen fixed-top shadow">
+    <div class="navigation-bar-content container">
+        
+        
+            <a class="element" href="<?php echo base_url();?>" style="color:#ffffff;padding-left: 30px; padding-right: 20px;"><i class="icon-home"></i>  HOME</a>
+        <span class="element-divider"></span>
+        <a href="#" class="element1 pull-menu"></a>
+        <div class="element-menu">
         <div class="element">
         <a class="dropdown-toggle" href="#"><i class="icon-book"></i>  BOOK</a>
             <ul class="dropdown-menu bg-amber" data-role="dropdown">
 
                 <li><a href="#">Today Highlight</a></li>
                 <li class="divider"></li>
-                <li><a href="<?php echo base_url()?>layout/category/1">Business</a></li>
-                <li><a href="<?php echo base_url()?>layout/category/2">Comic Strips</a></li>
-                <li><a href="<?php echo base_url()?>layout/category/3">Kids</a></li>
-                <li><a href="<?php echo base_url()?>layout/category/4">Medicals</a></li>
-                <li><a href="<?php echo base_url()?>layout/category/5">Romances</a></li>
-                <li><a href="<?php echo base_url()?>layout/category/6">Teen</a></li>
+                <li><a href="<?php echo base_url()?>user/category/1">Business</a></li>
+                <li><a href="<?php echo base_url()?>user/category/2">Comic Strips</a></li>
+                <li><a href="<?php echo base_url()?>user/category/3">Kids</a></li>
+                <li><a href="<?php echo base_url()?>user/category/4">Medicals</a></li>
+                <li><a href="<?php echo base_url()?>user/category/5">Romances</a></li>
+                <li><a href="<?php echo base_url()?>user/category/6">Teen</a></li>
                 <!-- <li class="divider"></li>
                 <li><a href="#">Print...</a></li>
                 <li class="divider"></li>
@@ -31,25 +31,23 @@
                 
               
             </ul>
-            
-        </div>
+        </div>    
+        
 
         <span class="element-divider"></span>
-        <a class="element brand" href="#"><span class="icon-spin"></span></a>
-        <a class="element brand" href="#"><span class="icon-printer"></span></a>
-        <span class="element-divider"></span>
+
         <div class="span3">
-        <div class="element input-element">
+        <div class="element input-element no-tablet-portrait no-phone">
         
-            <form>
-                <div class="input-control text" style="width:200px">
+            <form method="post">
+                <div class="input-control text" style="width: 200px;">
                 <input type="text" placeholder="Search..." name="search">
-                  <button class="btn-search"></button>
+                  <button class="btn-search" ></button>
                    </div>
             </form></div>
         </div>
-
-        <div class="element place-right">
+        
+         <div class="element place-right">
             <a class="dropdown-toggle" href="#">
                 <span class="icon-user-2"></span>
             </a>
@@ -60,10 +58,11 @@
             </ul>
         </div>
         
-        
-    </nav>
-</nav>
+    </div>
+    </div>
+</div>
     </div>
     </div>
     </div>
     </div>
+

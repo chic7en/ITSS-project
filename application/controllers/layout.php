@@ -19,6 +19,14 @@ class Layout extends MY_Controller{
         $this->load->view("bookshop/layout",$temp);
 
     }
+    public function product($id){
+        $this->load->model('product_model');
+        $temp['title']='Book Shop';
+        $temp['template']='bookshop/product';
+        $product=$this->product_model->get_info($id);
+        $temp['data']=$product;
+        $this->load->view("bookshop/layout",$temp);
+    }
     public function search(){
       echo $search;
     }
@@ -145,7 +153,7 @@ class Layout extends MY_Controller{
           $this->session->set_flashdata('login_success','Login Succes...!');
           $this->session->set_userdata(array(
                  'logged_in' => true,
-                  'user_id' => $user_id,
+                  'user_id' => $user->id,
                   'user_email'=>$user->email,
                   'user_name'=>$user->name
               ));

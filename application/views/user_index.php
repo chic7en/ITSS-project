@@ -1,5 +1,5 @@
 <div class="grid">
-                <div class="row" style="padding-left: 20px;">
+                <div class="row no-tablet-portrait no-phone" style="padding-left: 20px;">
                 	
                 	
                     <div class="span8">
@@ -71,9 +71,32 @@
 	 	<div >
 	    	<span class="list-title"><a  href="<?php echo base_url()?>user/product/<?php echo $p->id?>" style="color:#ffffff"><?php echo $p->name;?></a></span><br>
             <span class="list-remark">Price: <?php echo $p->price;?> VNĐ</span><br>
-            <button class="shortcut primary" style="height: 40px; padding-top: 0px;">
+            <script type="text/javascript"> 
+                   function load_ajax<?php echo $p->id?>(){
+                        var _url = "<?php echo base_url("user/like") ?>";
+                        var postData = {
+                                    product_id:'<?php echo $p->id?>'
+                                };
+                        $.ajax({
+                            url : _url,
+                            type : 'post',
+                            dateType:"json",
+                            data : postData,
+                            success : function (data){
+                                
+                                if(data!='0'){
+                                    $('.like-num<?php echo $p->id?>').html(data);
+                                    alert("Thank you for like this book..!!!");
+                                    }
+                                else alert("This book had in your like list..!!!");
+                        }
+                        });
+                    }
+                   
+                  </script>
+            <button class="shortcut primary " style="height: 40px; padding-top: 0px;" onclick="load_ajax<?php echo $p->id?>()">
                                     <i class="icon-heart"></i>
-                                    <small class="bg-lightBlue fg-white"><?php echo $p->like?></small>
+                                    <small class="bg-lightBlue fg-white like-num<?php echo $p->id?>"><?php echo $p->like_num?></small>
                                 </button>
 	    	<button class="shortcut danger" style="margin-top:35px;height:90px;" onclick="window.location=(&quot;<?php echo base_url();?>user/addtocart/<?php echo $p->id;?>&quot;); ">
 	                    <i class="icon-cart-2"></i>

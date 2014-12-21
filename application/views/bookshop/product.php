@@ -10,37 +10,14 @@
     <div >
           <span>Author: <?php echo $data->author?></span><br><br>
           <span class="list-remark">Price: <?php echo $data->price;?> VNĐ</span><br><br>
-                <script type="text/javascript">
-                   var _url = "<?php echo base_url("user/like") ?>"
-                    var postData = {
-                                    product_id:'<?php echo $data->id?>'
-                                };
-                   function load_ajax(){
-                        $.ajax({
-                            url : _url,
-                            type : 'post',
-                            dateType:"json",
-                            data : postData,
-                            success : function (data){
-                                if(data!='0'){
-                                    $('.like-num').html(data);
-                                    alert("Thank you for like this book..!!!");
-                                    }
-                                else alert("This book had in your like list..!!!");
-                            }
-                        });
-                    }
-                   
-                  </script>
-                <button class="shortcut primary " style="height: 40px; padding-top: 0px;" onclick="load_ajax()">
+                
+                <button class="shortcut primary " style="height: 40px; padding-top: 0px;">
                                     <i class="icon-heart"></i>
                                     <small class="bg-lightBlue fg-white like-num"><?php echo $data->like_num?></small>
                                 </button><br>
                
-        <button class="shortcut danger" style="margin-top:15px;height:90px;" onclick="window.location=(&quot;<?php echo base_url();?>user/addtocart/<?php echo $data->id;?>&quot;); ">
-                      <i class="icon-cart-2"></i>
-                      Buy                     
-                  </button><br><br>
+         <button class="shortcut danger notify_btn_2" style="margin-top:15px;height:90px;"> <i class="icon-cart-2"></i>Buy</button>
+                    <br><br>
            <button class="command-button primary">
                     <i class="icon-share-2 on-left"></i>
                       Great Book ?
@@ -59,7 +36,7 @@
                         <p><?php echo $data->content?></p>
                     </div>
                     <div id="_page_5" class="frame" style="display: none;">
-                        <p>This tab also placed right</p>
+                        <p>Need login to read and write comments..!!!</p>
                     </div>
                 </div>
 

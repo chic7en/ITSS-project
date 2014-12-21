@@ -3,7 +3,7 @@
 	<div class ="span9">
 	<div class="span3"></div>
 	<div class="span4 bg-amber padding20 text-center" style="padding-top:30px">
-         <h2 class="fg-white">Book Shop</h2>
+         <a href="<?php echo base_url()?>"><h2 class="fg-white">Book Shop</h2></a>
          <p class="subheader-secondary fg-white" style="font-size: 1.4rem;">simple steps to you library</p>	
     </div>
                     </div>
@@ -22,7 +22,7 @@
 			<i class   ="icon-cart-2"></i>
 		</div>
 	<div class ="brand">
-	<div class ="badge">2</div>
+	<div class ="badge"></div>
 	</div>
 	</div>	
 	
