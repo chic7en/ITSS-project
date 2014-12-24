@@ -13,6 +13,7 @@ class User extends MY_Controller
      $this->load->model('product_model');
      $this->load->model('like_model');
      $this->load->model('user_model');
+     $this->load->model('cart_model');
   }
   public function test(){
         echo $this->session->flashdata('login_success');
@@ -175,11 +176,28 @@ class User extends MY_Controller
         
         redirect('user/viewcart/');
     }
+    public function save_cart(){
+      $cart=$this->cart->contents();    
+      $cartString=serialize($cart);
+      // echo $cartString;
+      // echo $this->session->userdata("user_id"); 
+      // $datestring = " %Y - %m - %d - %h:%i %a";
+      $time = time();
+      // echo mdate($datestring, $time);
+      $data=array(
+        'cart_string'=> $cartString,
+        'user_id'    => $this->session->userdata("user_id") ,
+        'time'       => $time
+        );
+      $this->cart_model->create($data);
+      redirect("user");
+    }
     public function empty_cart()
      {
          //hàm xóa cả giỏ hàng
          $this->cart->destroy();
          redirect('user/viewcart');
+
      }
 
  

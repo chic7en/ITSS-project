@@ -73,7 +73,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="index.php?controller=order">
+                        <a href="<?php echo base_url("admin/view_list_order")?>">
                             <div class="panel-footer">
                                 <span class="pull-left">Xem chi tiết</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>

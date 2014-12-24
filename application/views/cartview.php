@@ -44,8 +44,17 @@
   </tfoot>
 </table>
 </div>
+ <script type="text/javascript">
+                        function load_msg(){
+                            
+                                alert("Update to database success..!!! Move to Home Page now.");
+                        
+                        }
+                        </script>
 <button class="success span2">Update your Cart</button>
 <div class="span2"></div>
-<a href="#" onclick="window.history.back();"><p class="fg-white">Continues to buy</p></a>
+<a href="#" onclick="window.location=(&quot;<?php echo base_url("user")?>&quot;)"><sapn class="span3 fg-white">Continues to buy</span></a>
 
+<a href="<?php echo base_url('user/empty_cart')?>" ><span class="span3 fg-white">Empty Cart</span></a>
+<a href="<?php echo base_url('user/save_cart')?>" onclick="load_msg()"><span class=" fg-white">Confirm and Save Cart</span></a>
 

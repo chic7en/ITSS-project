@@ -39,7 +39,7 @@
                         <a href="<?php echo base_url("admin/product")?>"><i class="fa fa-fw fa-list-ol"></i> Sản phẩm</a>
                     </li>
                     <li >
-                        <a href="index.php?controller=order"><i class="fa fa-fw fa-shopping-cart"></i> Giao dịch</a>
+                        <a href="<?php echo base_url("admin/view_list_order")?>"><i class="fa fa-fw fa-shopping-cart"></i> Giao dịch</a>
                     </li>
                     <li >
                         <a href="index.php?controller=producer"><i class="glyphicon glyphicon-refresh"></i> Nhà cung cấp</a>

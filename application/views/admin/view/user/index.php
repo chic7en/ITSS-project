@@ -7,7 +7,7 @@
                 	<h1 class="page-header">Người dùng</h1>
                     <ol class="breadcrumb">
                         <li>
-                            <i class="fa fa-dashboard"></i>  <a href="index.php?controller=dashboard">Bảng điều khiển</a>
+                            <i class="fa fa-dashboard"></i>  <a href="<?php echo base_url("admin")?>">Bảng điều khiển</a>
                         </li>
                         <li class="active">
                             <i class="fa fa-reddit"></i> Người dùng

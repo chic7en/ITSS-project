@@ -1,4 +1,6 @@
-<?php require('template/header.php') ;?>
+<?php $cart=unserialize($data->cart_string);
+      print_r ($cart);
+      ?>
 <div id="wrapper">
   <div id="page-wrapper">
     <div class="row">

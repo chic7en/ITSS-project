@@ -9,7 +9,7 @@ class Admin extends MY_Controller
 	     $this->load->model('like_model');
 	     $this->load->model('user_model');
 	     $this->load->model('catalog_model');	
-	     
+	     $this->load->model('cart_model');
 	}
 	public function index(){
 		if ($this->session->userdata("user_id")=='0') {
@@ -60,9 +60,27 @@ class Admin extends MY_Controller
             $this->product_model->update($data['id'],$data);
             redirect("admin/change_product/".$data['id']);
         }
+    }    
+    public function view_list_order(){
         
-        
+        $temp['title']='Book Shop';
+        $temp['template']='admin/view/order/index';
+        $input = array();
+        $input['limit'] = array('15', 0);
+        $getOrder = $this->cart_model->get_list($input);
+        $temp['data']=$getOrder;
+        $this->load->view("admin/admin_layout",$temp);
     }
+    public function view_order($order_id){
+        
+        $temp['title']='Book Shop';
+        $temp['template']='admin/view/order/detail_product';
+        $getOrder = $this->cart_model->get_info($order_id);
+        $temp['data']=$getOrder;
+        $this->load->view("admin/admin_layout",$temp);
+    }
+
+        
     public function logout(){
 
     // Hủy tất cả các session
