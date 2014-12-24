@@ -85,12 +85,12 @@ class Layout extends MY_Controller{
      
      //tao cac tap luat
      $this->form_validation->set_rules('email', 'Email', 'required|valid_email|xss_clean|callback_check_email');
-     $this->form_validation->set_rules('name', 'Name', 'required|min_length[8]|xss_clean');
+     $this->form_validation->set_rules('name', 'Name', 'required|min_length[4]|xss_clean');
      
-     $this->form_validation->set_rules('password', 'Password', 'required|min_length[6]|numeric|xss_clean');
+     $this->form_validation->set_rules('password', 'Password', 'required|min_length[6]|xss_clean');
      $this->form_validation->set_rules('re_password', 'Confirm Password', 'required|matches[password]|xss_clean');
-     
-     
+     $this->form_validation->set_rules('phone', 'Phone number', 'required|min_length[6]|numeric|xss_clean');
+     $this->form_validation->set_rules('address', 'Address', 'required|min_length[4]|xss_clean');
      if($this->form_validation->run())
      {
          //du lieu them vao bang thanh vien
@@ -98,7 +98,8 @@ class Layout extends MY_Controller{
              'name'     => $this->input->post('name'),
              'email'    => $this->input->post('email'),
              'password' => md5($this->input->post('password')),
-             
+             'phone'    =>  $this->input->post('phone'),
+             'address'  =>  $this->input->post('address')
          );
          //them thanh vien vao trong csdl
          if($this->user_model->create($data))
@@ -132,7 +133,7 @@ class Layout extends MY_Controller{
      
      $this->form_validation->set_rules('email', 'Email', 'required|min_length[8]|xss_clean');
      
-     $this->form_validation->set_rules('password', 'Password', 'required|min_length[6]|numeric|xss_clean');     
+     $this->form_validation->set_rules('password', 'Password', 'required|min_length[6]|xss_clean');     
      
      if($this->form_validation->run())
      {
@@ -155,10 +156,13 @@ class Layout extends MY_Controller{
                  'logged_in' => true,
                   'user_id' => $user->id,
                   'user_email'=>$user->email,
-                  'user_name'=>$user->name
+                  'user_name'=>$user->name,
+                  'user_level'=>$user->level
               ));
-
+            if($user->level=='0')
              redirect('user');
+            else if($user->level=='1')
+              redirect('admin');
          }
          
          

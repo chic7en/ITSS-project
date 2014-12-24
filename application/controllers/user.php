@@ -45,6 +45,9 @@ class User extends MY_Controller
    }
    public function index(){
         echo $this->session->flashdata('login_success');
+        if ($this->session->userdata("user_id")=='0') {
+          redirect();
+        }
         $this->load->model('product_model');
         $temp['title']='Book Shop';
         $temp['template']='user_index';

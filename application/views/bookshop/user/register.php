@@ -27,6 +27,16 @@
                         <input class="full-width has-padding has-border" id="signup-password" type="password" placeholder="Confirm Password" name="re_password">
                         <div class="error" id="re_password_error"><?php echo form_error('re_password')?></div>
                     </p>
+                    <p class="fieldset">
+                        <label class="image-replace " for="signup-password">Phone number</label>
+                        <input class="full-width has-padding has-border" id="signup-password" type="text" placeholder="Phone number" name="phone">
+                        <div class="error" id=""><?php echo form_error('phone')?></div>
+                    </p>
+                    <p class="fieldset">
+                        <label class="image-replace " for="signup-password">Address</label>
+                        <input class="full-width has-padding has-border" id="signup-password" type="text" placeholder="Address" name="address">
+                        <div class="error" id=""><?php echo form_error('address')?></div>
+                    </p>
 
                     <p class="fieldset">
                         <input type="checkbox" id="accept-terms">
