@@ -14,6 +14,7 @@ class User extends MY_Controller
      $this->load->model('like_model');
      $this->load->model('user_model');
      $this->load->model('cart_model');
+     $this->load->model('books_model');
   }
   public function test(){
         echo $this->session->flashdata('login_success');
@@ -23,6 +24,13 @@ class User extends MY_Controller
     $time1=mdate($datestring, $time);
     echo $time1;
     
+  }
+  function get_books(){
+    $this->load->model('books_model');
+    if (isset($_GET['term'])){
+      $q = strtolower($_GET['term']);
+     $this->books_model->get_book($q);
+    }
   }
   public function like(){
     $product_id = $this->input->post('product_id');

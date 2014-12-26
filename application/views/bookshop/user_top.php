@@ -37,11 +37,24 @@
         <span class="element-divider"></span>
 
         <div class="span3">
+        <script type="text/javascript">
+        $(document).ready(function(){
+          $("#books").autocomplete({
+            source: "<?php echo base_url("user/get_books")?>"
+          }).data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+                var inner_html = '<a href="<?php echo base_url("user/product");?>/'+ item.id +'"><div class="list_item_container"><div class="image1"><img src="<?php echo base_url("public/bookshop/images")?>/' + item.image + '"></div><div class="label">' + item.label + '</div><div class="description">' + item.description + '</div></div></a>';
+                return $( "<li></li>" )
+                    .data( "item.autocomplete", item )
+                    .append(inner_html)
+                    .appendTo( ul );
+            };
+        });
+        </script>
         <div class="element input-element no-tablet-portrait no-phone">
         
             <form method="post">
                 <div class="input-control text" style="width: 200px;">
-                <input type="text" placeholder="Search..." name="search">
+                <input type="text" id="books" placeholder="Search..." name="search">
                   <button class="btn-search" ></button>
                    </div>
             </form></div>
