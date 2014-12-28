@@ -15,6 +15,7 @@ class User extends MY_Controller
      $this->load->model('user_model');
      $this->load->model('cart_model');
      $this->load->model('books_model');
+     $this->load->model('comment_model');
   }
   public function test(){
         echo $this->session->flashdata('login_success');
@@ -32,6 +33,21 @@ class User extends MY_Controller
      $this->books_model->get_book($q);
     }
   }
+  public function comment(){
+    $product_id = $this->input->post('product_id');
+    $content = $this->input->post('comment');
+    $user_id= $this->session->userdata("user_id");
+    $data=array(
+      'product_id'=> $product_id,
+      'content'   => $content,
+      'user_id'   => $this->session->userdata("user_id"),
+      'time'      =>  time()
+      );
+    // print_r($data);
+    $this->comment_model->create($data);
+     // echo '1';
+    redirect("user/product/".$product_id);
+   }
   public function like(){
     $product_id = $this->input->post('product_id');
     $user_id= $this->session->userdata("user_id");

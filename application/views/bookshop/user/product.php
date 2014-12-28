@@ -30,6 +30,7 @@
                             }
                         });
                     }
+                    
                    
                   </script>
                 <button class="shortcut primary " style="height: 40px; padding-top: 0px;" onclick="load_ajax()">
@@ -56,13 +57,55 @@
 
                 <div class="frames ">                  
                     <div id="_page_4" class="frame" style="display: none;">
-                        <p><?php echo $data->content?></p>
+                        <p><?php echo nl2br($data->content);?></p>
                     </div>
                     <div id="_page_5" class="frame" style="display: none;">
-                        <p>This tab also placed right</p>
-                    </div>
-                </div>
+                        <div class="listview-outlook">
+                            
+                            
+                            <?php $where['product_id']=$data->id;
+                            $input['where']=$where;
+                            $getComment= $this->comment_model->get_list($input);
+                            ?>
+                            <?php foreach($getComment as $key => $value) :?>
+                            <a href="#" class="list">
+                            <div class="list-content">
+                            <span class="list-title fg-amber"><?php $userComment=$this->user_model->get_info($value->user_id);
+                            echo $userComment->name;
+                            ?> :
+                            </span>
+                            <p class="list-remark fg-blue " style="font-size:16px"><?php echo nl2br($value->content);?></p>
+                            <span class="list-subtitle fg-lightGreen"><?php echo $userComment->email?> on <?php 
+                            $datestring = " %Y - %m - %d - %h:%i %a";
+                            echo mdate($datestring,$value->time);?></span>
+                            
+                            
+                            </div>
+                            </a>
+                            <?php endforeach?>
+                        </div>
+                      
+                        <div>
+                         <?php 
+                      
+                         echo form_open('user/comment')?> 
+                          <h3>Your Comment :</h3>
+                          <script type="text/javascript">
+                          function msg(){
+                            alert("Your comment has been update...!!!");
+                          }
+                          </script>
 
+                          <form method="post" >
+                          <input type="hidden" name="product_id" value="<?php echo $data->id?>" />
+                                    <div data-role="input-control" class="input-control textarea">
+                                        <textarea value="comment" name="comment" ></textarea>
+                                    </div>
+                                    <button class="success" type="submit" onclick="msg()">Submit Comment</button>
+                          </form>
+                        </div>
+                </div>
+              </div>
             </div>
   </div>
 
