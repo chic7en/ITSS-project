@@ -68,7 +68,7 @@
             <ul class="dropdown-menu place-right bg-lightGreen" data-role="dropdown">
                 <li><a href="<?php echo base_url()?>user/viewcart">View Cart</a></li>
                 <li><a href="<?php echo base_url()?>user/empty_cart">Empty Cart</a></li>
-                <li><a href="<?php echo base_url()?>layout/register">Infomation</a></li>
+                <li><a href="<?php echo base_url()?>user/profile">Infomation</a></li>
                 <li><a href="<?php echo base_url()?>user/logout">Sign Out</a></li>
                 
             </ul>

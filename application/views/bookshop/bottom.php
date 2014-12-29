@@ -21,6 +21,6 @@
             </div>
 
             <div style="padding: 10px" class="container tertiary-text bg-dark fg-white">
-                2014-2015, BookShop &copy; by  <a class="fg-yellow" href="mailto:congtranit@gmail.com">Công Trần</a>
+                2014-2015, BookShop &copy; by  <a class="fg-yellow" href="mailto:congtranit@gmail.com">04 Group.</a>
             </div>
         </div>

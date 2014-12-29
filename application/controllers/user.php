@@ -85,6 +85,21 @@ class User extends MY_Controller
         $temp['user']=$user;
         $this->load->view("bookshop/user_layout",$temp);
     }
+     public function profile(){
+        $temp['title']='User Profile';
+        $temp['template']='bookshop/user/profile';
+        $temp['data']='';
+        $user['name']=$this->session->userdata("user_name");
+        $temp['user']=$user;
+        $this->load->view("bookshop/user_layout",$temp);
+    }
+    public function change_profile(){
+      $data=($_POST);
+      $data['password']=md5($_POST['password']);
+      $this->user_model->update($this->session->userdata("user_id"),$data);
+      redirect("user/profile");
+    }
+
     public function product($id){
         $this->load->model('product_model');
         $temp['title']='Book Shop';
