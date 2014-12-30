@@ -38,7 +38,7 @@
                     </div><br>
           <span class="list-remark">Password: </span><br>
           <div data-role="input-control" class="input-control password">
-                        <input type="password" autofocus="" placeholder="type password" name="password">
+                        <input type="password" autofocus="" placeholder="type password" value="123456" name="password">
                         <button tabindex="-1" class="btn-reveal" type="button"></button>
                     </div><br>       
         </div><button type="submit" class="success" onclick="msg()" >Submit</button> 
